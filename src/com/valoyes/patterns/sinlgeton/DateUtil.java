@@ -26,10 +26,9 @@ public class DateUtil {
 		// ctor privado de esta manera, ninguna otra clase podra instanciar directamente esta clase
 	}
 	
-	// metodo estatico cuyo nombre es una convetion utilizado para
-	// solo crearemos una nueva instancia si el miembro privado es nulo,
-	// es decir la primera vez
-	public static DateUtil getInstance() {
+	// syncronized : fuerza a que el metodo solo pueda ser accedido
+	// por un thread a la vez -> lo cual lo har'a thread-safe
+	public static synchronized DateUtil getInstance() {
 		// lazy initialization
 		if(instance == null) {
 			instance = new DateUtil();
