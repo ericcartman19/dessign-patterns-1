@@ -12,6 +12,8 @@ package com.valoyes.patterns.sinlgeton;
  */
 public class DateUtil {
 
+	// eager initialization cuando estamos seguros que nuestra clase sera utilizada el menos una vez
+	// en nuestra application
 	private static DateUtil instance;
 	
 	private DateUtil() {
@@ -22,9 +24,10 @@ public class DateUtil {
 	// solo crearemos una nueva instancia si el miembro privado es nulo,
 	// es decir la primera vez
 	public static DateUtil getInstance() {
-		if(instance == null) {
-			instance = new DateUtil();
-		}
+		// lazy initialization
+//		if(instance == null) {
+//			instance = new DateUtil();
+//		}
 		return instance;
 	}
 }
