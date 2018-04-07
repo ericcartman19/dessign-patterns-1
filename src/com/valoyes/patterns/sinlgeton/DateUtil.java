@@ -48,6 +48,7 @@ public class DateUtil implements Serializable {
 	// se llama al metodo el cual devuelve la unica instancia existente, de esta manera se impide la creacion
 	// de mas de una instancia a traves de serialization deserialization
 	/// hacemos el metodo private or protected para que otras clases no se puedan hacer con la instancia directamente
+	// en este casco la dejamos protected para que las clases hijas si requerido puedad @override el metodo
 	protected Object readResolve() {
 		return instance;
 	}
