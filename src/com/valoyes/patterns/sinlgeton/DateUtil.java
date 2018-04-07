@@ -14,7 +14,7 @@ public class DateUtil {
 
 	// eager initialization cuando estamos seguros que nuestra clase sera utilizada el menos una vez
 	// en nuestra application
-	private static DateUtil instance;
+	private static DateUtil instance = new DateUtil();
 	
 	private DateUtil() {
 		// ctor privado de esta manera, ninguna otra clase podra instanciar directamente esta clase
