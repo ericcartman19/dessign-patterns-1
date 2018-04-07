@@ -1,5 +1,12 @@
 package com.valoyes.patterns.factory;
 
+/**
+ * @author benito
+ * 
+ * Factory class que se toma la responsabilidad de la instanciacion, de modo que la(s)
+ * clase(s) cliente(s) se pueda concentrar solo en la logica
+ *
+ */
 public class PizzaFactory {
 
 	public static Pizza create(PizzaTypeEnum type) {
