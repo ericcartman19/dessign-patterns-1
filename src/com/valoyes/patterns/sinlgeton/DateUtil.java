@@ -42,4 +42,12 @@ public class DateUtil implements Serializable {
 
 		return instance;
 	}
+	
+	// cuando se deserializa nuestro metodo se invocara el readResolve method
+	// una vez que se ha terminado de leer desde el fichero
+	// se llama al metodo el cual devuelve la unica instancia existente, de esta manera se impide la creacion
+	// de mas de una instancia a traves de serialization deserialization
+	public Object readResolve() {
+		return instance;
+	}
 }
