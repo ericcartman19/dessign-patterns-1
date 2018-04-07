@@ -1,5 +1,7 @@
 package com.valoyes.patterns.sinlgeton;
 
+import java.io.Serializable;
+
 /**
  * @author benito
  * 
@@ -11,8 +13,10 @@ package com.valoyes.patterns.sinlgeton;
  *         de la clase que es el que se
  *
  */
-public class DateUtil {
-
+public class DateUtil implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	
 	private static volatile DateUtil instance;
 
 	private DateUtil() {
