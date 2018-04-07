@@ -18,9 +18,9 @@ public class DateUtil {
 	
 	// static blocks en Java se cargan una sola vez: cuando la clase se carga en memoria
 	// static blocks tambien son eager initialization
-	static {
-		instance = new DateUtil();
-	}
+//	static {
+//		instance = new DateUtil();
+//	}
 	
 	private DateUtil() {
 		// ctor privado de esta manera, ninguna otra clase podra instanciar directamente esta clase
@@ -31,9 +31,9 @@ public class DateUtil {
 	// es decir la primera vez
 	public static DateUtil getInstance() {
 		// lazy initialization
-//		if(instance == null) {
-//			instance = new DateUtil();
-//		}
+		if(instance == null) {
+			instance = new DateUtil();
+		}
 		return instance;
 	}
 }
