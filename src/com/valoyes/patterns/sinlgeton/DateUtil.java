@@ -13,7 +13,7 @@ package com.valoyes.patterns.sinlgeton;
  */
 public class DateUtil {
 
-	private static DateUtil instance;
+	private static volatile DateUtil instance;
 
 	private DateUtil() {
 		// ctor privado de esta manera, ninguna otra clase podra instanciar directamente
@@ -24,11 +24,15 @@ public class DateUtil {
 	// por un thread a la vez -> lo cual lo har'a thread-safe
 	public static synchronized DateUtil getInstance() {
 
-		// tenemos que adquerir un lock del objeto o de la clase
-		synchronized (DateUtil.class /*instance*/) {
-			// lazy initialization
-			if (instance == null) {
-				instance = new DateUtil();
+		// syncrhonized is a very expensive operation, y queremos hacerlo 
+		// solo cuando sea necesario
+		if (instance == null) {
+			// tenemos que adquerir un lock del objeto o de la clase
+			synchronized (DateUtil.class) {
+				// lazy initialization
+				if (instance == null) {
+					instance = new DateUtil();
+				}
 			}
 		}
 

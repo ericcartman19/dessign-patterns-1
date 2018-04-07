@@ -1,6 +1,6 @@
 package com.valoyes.patterns.sinlgeton;
 
-public class Test {
+public class SingletonTest {
 
 	public static void main(String[] args) {
 		
