@@ -13,7 +13,7 @@ import java.io.Serializable;
  *         de la clase que es el que se
  *
  */
-public class DateUtil implements Serializable {
+public class DateUtil implements Serializable, Cloneable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -52,4 +52,13 @@ public class DateUtil implements Serializable {
 	protected Object readResolve() {
 		return instance;
 	}
+	
+	// si una clase cliente trata clonar nuestra objeto de manera directa
+	// o a traves de una child class de DateUtil el metodo devolvera
+	// la cloneNotSupported exception
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		throw new CloneNotSupportedException();
+	}
+	
 }
