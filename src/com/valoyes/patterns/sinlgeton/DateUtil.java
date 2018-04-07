@@ -14,7 +14,13 @@ public class DateUtil {
 
 	// eager initialization cuando estamos seguros que nuestra clase sera utilizada el menos una vez
 	// en nuestra application
-	private static DateUtil instance = new DateUtil();
+	private static DateUtil instance;
+	
+	// static blocks en Java se cargan una sola vez: cuando la clase se carga en memoria
+	// static blocks tambien son eager initialization
+	static {
+		instance = new DateUtil();
+	}
 	
 	private DateUtil() {
 		// ctor privado de esta manera, ninguna otra clase podra instanciar directamente esta clase
