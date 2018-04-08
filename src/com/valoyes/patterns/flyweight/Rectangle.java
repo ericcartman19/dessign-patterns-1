@@ -1,18 +1,21 @@
 package com.valoyes.patterns.flyweight;
 
-public class Rectangle implements Shape {
+public class Rectangle extends Shape {
 	
 	private String label;
-	private int length;
-	private int breadth;
-	private String fillStyle;
+	// estos tres campos son extrinsecos
+	// no tienen nada en com'un con circulo
+	// y los pasaremos como parametros a draw method
+	// private int length;
+	// private int breadth;
+	// private String fillStyle;
 	
 	public Rectangle() {
 		label = "Rectangle";
 	}
 	
 	@Override
-	public void draw() {
+	public void draw(int length, int breadth, String fillStyle) {
 		
 		String description = "Drawing: [label=" + label + ", length=" + length + ", breadth=" + breadth + ", fillStyle=" + fillStyle
 				+ "]";
@@ -25,30 +28,6 @@ public class Rectangle implements Shape {
 
 	public void setLabel(String label) {
 		this.label = label;
-	}
-
-	public int getLength() {
-		return length;
-	}
-
-	public void setLength(int length) {
-		this.length = length;
-	}
-
-	public int getBreadth() {
-		return breadth;
-	}
-
-	public void setBreadth(int breadth) {
-		this.breadth = breadth;
-	}
-
-	public String getFillStyle() {
-		return fillStyle;
-	}
-
-	public void setFillStyle(String fillStyle) {
-		this.fillStyle = fillStyle;
 	}
 	
 }
