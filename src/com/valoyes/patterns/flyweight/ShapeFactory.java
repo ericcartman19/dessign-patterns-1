@@ -16,9 +16,9 @@ public class ShapeFactory {
 
 	// crearemos el shape una sola vez y haremos cache
 	// en este map
-	private static Map<ShapTypeEnum, Shape> shapes = new HashMap<>();
+	private static Map<ShapeTypeEnum, Shape> shapes = new HashMap<>();
 	
-	public static Shape getShape(ShapTypeEnum type) {
+	public static Shape getShape(ShapeTypeEnum type) {
 		
 		Shape shape = null;
 		
@@ -29,7 +29,7 @@ public class ShapeFactory {
 			// sino...
 		}else {
 			
-			if(ShapTypeEnum.CIRCLE == type) {
+			if(ShapeTypeEnum.CIRCLE == type) {
 				shape = new Circle();
 			}else {
 				shape = new Rectangle();

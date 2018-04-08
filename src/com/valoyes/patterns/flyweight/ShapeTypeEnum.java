@@ -1,6 +1,6 @@
 package com.valoyes.patterns.flyweight;
 
-public enum ShapTypeEnum {
+public enum ShapeTypeEnum {
 	CIRCLE,
 	RECTANGLE
 }

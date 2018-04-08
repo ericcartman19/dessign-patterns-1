@@ -7,10 +7,10 @@ public class PaintApp {
 		Shape shape = null;
 		for(int i = 1; i <= numberOfShappes; i++) {
 			if(i % 2 == 0) {
-				shape = ShapeFactory.getShape(ShapTypeEnum.CIRCLE);
+				shape = ShapeFactory.getShape(ShapeTypeEnum.CIRCLE);
 				shape.draw(i, "red", "white");
 			}else {
-				shape = ShapeFactory.getShape(ShapTypeEnum.RECTANGLE);
+				shape = ShapeFactory.getShape(ShapeTypeEnum.RECTANGLE);
 				shape.draw(i, i + i, "dotted");
 			}
 		}
