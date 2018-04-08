@@ -24,7 +24,7 @@ public class ShapeFactory {
 		
 		// si existe en el mapa la reutilizamos
 		if(shapes.get(type) != null) {
-			shapes.get(type);
+			shape = shapes.get(type);
 			
 			// sino...
 		}else {
