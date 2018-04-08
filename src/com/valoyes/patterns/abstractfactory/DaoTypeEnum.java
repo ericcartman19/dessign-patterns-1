@@ -1,6 +1,6 @@
 package com.valoyes.patterns.abstractfactory;
 
-public enum FactoryTypeEnum {
-	XML, DB
-
+public enum DaoTypeEnum {
+	EMPLOYEE,
+	DEPARTMENT
 }

@@ -1,13 +1,19 @@
 package com.valoyes.patterns.abstractfactory;
 
+/**
+ * Esta clase es la implementacion de Factory pattern
+ * 
+ * @author benito
+ *
+ */
 public class XMLDaoFactory extends DaoAbstractFactory {
 
 	@Override
-	public Dao createDao(FactoryTypeEnum type) {
+	public Dao createDao(DaoTypeEnum type) {
 		
 		Dao dao = null;
 		
-		if(FactoryTypeEnum.EMPLOYEE == type) {
+		if(DaoTypeEnum.EMPLOYEE == type) {
 			dao = new XMLEmpDao();
 		}else {
 			dao = new XMLDeptDao();

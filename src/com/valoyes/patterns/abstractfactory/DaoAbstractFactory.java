@@ -2,6 +2,6 @@ package com.valoyes.patterns.abstractfactory;
 
 public abstract class DaoAbstractFactory {
 	
-	public abstract Dao createDao(FactoryTypeEnum type);
+	public abstract Dao createDao(DaoTypeEnum type);
 	
 }
