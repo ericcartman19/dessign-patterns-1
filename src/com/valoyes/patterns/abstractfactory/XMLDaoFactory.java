@@ -16,10 +16,9 @@ public class XMLDaoFactory extends DaoAbstractFactory {
 		if(DaoTypeEnum.EMPLOYEE == type) {
 			dao = new XMLEmpDao();
 		}else {
-			dao = new XMLDeptDao();
+			dao = new DBDeptDao();
 		}
 		
-		dao.save();
 		return dao;
 	}
 

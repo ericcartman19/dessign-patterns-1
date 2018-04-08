@@ -4,7 +4,7 @@ public class XMLDeptDao implements Dao {
 
 	@Override
 	public void save() {
-		System.out.println("Saving Employee to XML");
+		System.out.println("Saving Department to XML");
 	}
 
 	

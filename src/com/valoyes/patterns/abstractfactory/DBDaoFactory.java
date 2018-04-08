@@ -19,7 +19,6 @@ public class DBDaoFactory extends DaoAbstractFactory {
 			dao = new DBDeptDao();
 		}
 		
-		dao.save();
 		return dao;
 	}
 
