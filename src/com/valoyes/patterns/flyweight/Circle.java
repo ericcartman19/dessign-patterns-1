@@ -3,12 +3,7 @@ package com.valoyes.patterns.flyweight;
 public class Circle extends Shape {
 
 	private String label;
-	// estos tres campos son extrinsecos
-	// no tienen nada en com'un con rectangulo
-	// y los pasaremos como parametros a draw method
-	// private int radius;
-	// private String fillColor;
-	// private String lineColor;
+	// hemos eliminado los campos extrinsecos
 	
 	public Circle() {
 		label = "Circle";

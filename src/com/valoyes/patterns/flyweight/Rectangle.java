@@ -3,12 +3,7 @@ package com.valoyes.patterns.flyweight;
 public class Rectangle extends Shape {
 	
 	private String label;
-	// estos tres campos son extrinsecos
-	// no tienen nada en com'un con circulo
-	// y los pasaremos como parametros a draw method
-	// private int length;
-	// private int breadth;
-	// private String fillStyle;
+	// hemos eliminado los campos extrinsecos
 	
 	public Rectangle() {
 		label = "Rectangle";
